@@ -5,13 +5,14 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+        <link href="../../resources/css/cssLayout.css" rel="stylesheet" type="text/css"/>
+        <link href="../../resources/css/default.css" rel="stylesheet" type="text/css"/>
 
     <body>
-
         <ui:composition template="./../../plantilla/plantilla.xhtml">
 
             <ui:define name="content">
-                <h1>Datos de Clientes</h1>
+                <h2>Datos de Clientes</h2>
                 <h:form>
                     <p:commandButton value="NuevoCliente" actionListener="#{clienteBean.prepararNuevoCliente()}"
                                      oncomplete="PF('dialogNuevoCliente').show();" 

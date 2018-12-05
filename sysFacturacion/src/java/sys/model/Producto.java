@@ -1,5 +1,5 @@
 package sys.model;
-// Generated 26/11/2018 05:47:27 PM by Hibernate Tools 4.3.1
+// Generated 05/12/2018 06:07:52 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -14,7 +14,7 @@ public class Producto  implements java.io.Serializable {
 
      private Integer codProducto;
      private String nombreProducto;
-     private float precioVenta;
+     private BigDecimal precioVenta;
      private int stockMinimo;
      private int stockActual;
      private String codBarra;
@@ -24,14 +24,14 @@ public class Producto  implements java.io.Serializable {
     }
 
 	
-    public Producto(String nombreProducto, float precioVenta, int stockMinimo, int stockActual, String codBarra) {
+    public Producto(String nombreProducto, BigDecimal precioVenta, int stockMinimo, int stockActual, String codBarra) {
         this.nombreProducto = nombreProducto;
         this.precioVenta = precioVenta;
         this.stockMinimo = stockMinimo;
         this.stockActual = stockActual;
         this.codBarra = codBarra;
     }
-    public Producto(String nombreProducto, float precioVenta, int stockMinimo, int stockActual, String codBarra, Set<Detallefactura> detallefacturas) {
+    public Producto(String nombreProducto, BigDecimal precioVenta, int stockMinimo, int stockActual, String codBarra, Set<Detallefactura> detallefacturas) {
        this.nombreProducto = nombreProducto;
        this.precioVenta = precioVenta;
        this.stockMinimo = stockMinimo;
@@ -54,11 +54,11 @@ public class Producto  implements java.io.Serializable {
     public void setNombreProducto(String nombreProducto) {
         this.nombreProducto = nombreProducto;
     }
-    public float getPrecioVenta() {
+    public BigDecimal getPrecioVenta() {
         return this.precioVenta;
     }
     
-    public void setPrecioVenta(float precioVenta) {
+    public void setPrecioVenta(BigDecimal precioVenta) {
         this.precioVenta = precioVenta;
     }
     public int getStockMinimo() {
